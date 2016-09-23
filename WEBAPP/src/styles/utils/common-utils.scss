@@ -1,0 +1,15 @@
+$baseColor: #041;
+
+@font-face {
+  font-family: 'iconfont';
+  src: url('/font/iconfont1.woff') format('woff'), /* chrome、firefox */
+  url('/font/iconfont1.ttf') format('truetype'); /* iOS 4.1- */
+}
+@font-face {
+  font-family: 'iconfont';
+  src: url('/font/iconfont2.woff') format('woff'), /* chrome、firefox */
+  url('/font/iconfont2.ttf') format('truetype'); /* iOS 4.1- */
+}
+.iconfont{
+  font-family: iconfont;
+}
