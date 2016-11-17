@@ -1,0 +1,41 @@
+<header class="yo-header">
+    <span class="regret" qapp-role="router" href="#!back">
+        <i class="yo-ico">&#xf07d;</i>
+    </span>
+    <h2 class="title">B</h2>
+</header>
+<div class="yo-list yo-list-group">
+    <h2 class="label">返回</h2>
+    <!-- 通过 href '#!back' 实现返回前一个历史 -->
+    <div class="item item-active" href="#!back" qapp-role="router">
+        <span class="flex">back</span>
+        <i class="yo-ico"></i>
+    </div>
+    <!-- 通过 href '#!back(n)' 实现返回指定历史 -->
+    <div class="item item-active" href="#!back(2)" qapp-role="router">
+        <span class="flex">back(2)</span>
+        <i class="yo-ico"></i>
+    </div>
+    <!-- 通过 href '#viewName'，有则返回，无则新开 -->
+    <div class="item item-active" href="#a" qapp-role="router">
+        <span class="flex">backTo A</span>
+        <i class="yo-ico"></i>
+    </div>
+    <!-- 通过 href '#viewName'，有则返回，无则新开 -->
+    <div class="item item-active" href="#index" qapp-role="router">
+        <span class="flex">backTo index</span>
+        <i class="yo-ico"></i>
+    </div>
+    <!-- 通过 href '#!home' 实现返回第一个历史 -->
+    <div class="item item-active" href="#!home" qapp-role="router" param="by=href">
+        <span class="flex">backTo home</span>
+        <i class="yo-ico"></i>
+    </div>
+
+    <h2 class="label">退出</h2>
+    <!-- 通过 href '!back' 实现返回前一个历史 -->
+    <div class="item item-active" id="exit">
+        <span class="flex">exit</span>
+        <i class="yo-ico"></i>
+    </div>
+</div>

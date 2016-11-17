@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>QApp 版本</title>
+    <link rel="stylesheet" href="source/app.css"/>
+    <link rel="stylesheet" href="source/highlight.min.css">
+</head>
+<body>
+<a id="skippy" class="sr-only sr-only-focusable" href="#content"><div class="container"><span class="skiplink-text">Skip to main content</span></div></a>
+
+
+<!-- Docs master nav -->
+<header class="navbar navbar-static-top docs-nav" id="top" role="banner">
+    <div class="container">
+        <div class="navbar-header">
+            <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target="#bs-navbar" aria-controls="bs-navbar" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            
+            <a href="http://ued.qunar.com/mobile/" class="navbar-brand">HY</a>
+            
+        </div>
+        <nav id="bs-navbar" class="collapse navbar-collapse">
+            <ul class="nav navbar-nav navbar-right">
+                
+                
+                <li class="active">
+                    <a href="http://ued.qunar.com/mobile/qapp/doc/" target="">QApp</a>
+                </li>
+                
+                <li class="">
+                    <a href="http://ued.qunar.com/mobile/kami/doc/" target="">Kami</a>
+                </li>
+                
+                <li class="">
+                    <a href="http://ued.qunar.com/mobile/yo/doc/" target="">Yo</a>
+                </li>
+                
+                <li class="">
+                    <a href="http://hy.qunar.com/docs/qunarapi-api.html" target="">QunarAPI</a>
+                </li>
+                
+                <li class="">
+                    <a href="http://ued.qunar.com/mobile/qmb2/" target="">QMB2</a>
+                </li>
+                
+                <li class="">
+                    <a href="http://ued.qunar.com/mobile/statistics/" target="">Statistics</a>
+                </li>
+                
+                <li class="">
+                    <a href="http://ued.qunar.com/mobile/blog/" target="">Blog</a>
+                </li>
+                
+                <li class="">
+                    <a href="http://hy.qunar.com/docs/index.html" target="">Hytive</a>
+                </li>
+                
+                
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<!-- Docs page layout -->
+
+<div class="docs-header" id="content" style="margin-bottom:0">
+    <div class="container">
+        <h1>QApp Framework 版本</h1>
+        <p>版本记录 与 CHANGELOG</p>
+    </div>
+</div>
+
+
+
+<header class="navbar navbar-static-top docs-second-nav">
+    <div class="container">
+        <nav>
+            <ul class="nav navbar-nav">
+                
+                <li class="">
+                    
+                    <a href="index.html">简介</a>
+                    
+                </li>
+                
+                <li class="">
+                    
+                    <a href="api.html">API</a>
+                    
+                </li>
+                
+                <li class="">
+                    
+                    <a href="hybird.html">混合开发</a>
+                    
+                </li>
+                
+                <li class="">
+                    
+                    <a href="plugins.html">插件</a>
+                    
+                </li>
+                
+                <li class="">
+                    
+                    <a href="build.html">构建</a>
+                    
+                </li>
+                
+                <li class="active">
+                    
+                    <a href="changelog.html">版本</a>
+                    
+                </li>
+                
+            </ul>
+        </nav>
+    </div>
+</header>
+
+
+<div class="container docs-container">
+    
+    
+    <div id="readme">
+        <article class="markdown-body">
+            
+            <h5 id="1.0.0-preview">1.0.0-preview</h5><ul>
+<li>优化对<code>微信</code>、<code>Touch</code>的适配，例如支持微信和Safari手势回退、Header 适配等。</li>
+<li>框架内部更改代码目录结构，插件使用和核心包统一的版本号，避免不同版本间的问题。</li>
+<li>支持自定义选择模块打包（已经提供 gulp 工具）。（例如，手势已经成为一个可选模块）</li>
+<li>更改了一些逻辑：<ul>
+<li>hash 采用单 <code>#</code>，修复 ios 客户端识别问题。</li>
+<li>支持配置采用 JSON 形式的参数。</li>
+<li>优化 生命周期 和 hash 更改的时机。（注：去除 0.4.8 新加的 opened 事件;在 show 时，location.href 已经改变完成。)</li>
+<li>增加 willForward 事件，全局通知页面将要离开。</li>
+<li>Hy 增加 initFilter 事件，全局通知相关 filter 已经 init。</li>
+<li>删除 Modules 逻辑和相应的 View 的 loaded 事件。</li>
+<li>与服务端路由支持适配。</li>
+</ul>
+</li>
+<li>在此基础上的一些优化计划：<ul>
+<li>适配非 QApp 项目，部分增加 QApp View。</li>
+<li>框架内部错误抛出接口。</li>
+<li>老 Module 的兼容、配置。</li>
+</ul>
+</li>
+</ul>
+<h5 id="新的路由跳转说明">新的路由跳转说明</h5><p>此版本，一个大方面是主要修复了 QApp 在Touch 和  微信端 项目适配的问题，最后采取跳转的方式来适配（hash 跳转和采用pushState方式的 URL 变化，都不能让微信的形成『能用手势回退的历史』）。</p>
+<pre><code>QApp.config({
+    hashSupport: {
+        usePath: {
+            ext: &#39;.jsp&#39;,
+            basePath: &#39;/qapp-v1.0.0/demo/&#39;
+        }
+    }
+});
+</code></pre><p>使用跳转的形式，需要后端的支持。例如上面的配置：</p>
+<ul>
+<li>View a 的地址是 <code>/qapp-v1.0.0/demo/a.jsp?param=value</code></li>
+<li>View b  的地址是 <code>/qapp-v1.0.0/demo/b.jsp?param=value</code></li>
+</ul>
+<p>这时，需要服务器支持: a.jsp 和 b.jsp 都指向 index.jsp 的内容（或者做进一步优化，a.jsp 只加载 View a 的 所需要的 js），使用 struts 或者 nginx 都可以很容易做到这点。</p>
+<p>当然，你可以配置 usePath: false，这时就不需要后端支持了。</p>
+<ul>
+<li>View a 的地址是 <code>/qapp-v1.0.0/demo/index.jsp?_qtid=681237861376#a?param=value</code></li>
+</ul>
+<p>自动加 timestamp 参数的 query，做强制跳转。</p>
+<p>前一种方式，url 更可读，分享出去更美观， <a href="http://ued.qunar.com/qapp-v1.0.0/demo/">Demo 地址</a>；后一种方式不需要服务端支持，但是 url 不美观， <a href="http://ued.qunar.com/qapp-v1.0.0/demo/origin.html">Demo 地址</a>。</p>
+<hr>
+<h5 id="0.4.9">0.4.9</h5><ul>
+<li>fixed 在 View 中，调用 this.showWidget 时的错误</li>
+</ul>
+<h5 id="0.4.8">0.4.8</h5><ul>
+<li>fixed 虚拟按键、解锁屏幕时显示高度不准确的问题。（largeChange 配置改为 autoResize，并默认开启。）</li>
+<li>fixed 手势在特殊情况下代码报错的问题（不影响业务）</li>
+<li>View 增加 opened 事件，用于 open 动作彻底完成后的时间点 （actived 之后，location.href 已经改变完成）</li>
+</ul>
+<h5 id="0.4.7">0.4.7</h5><ul>
+<li>fixed Module 在 RenderAll 时的问题</li>
+<li>忽略 docs 目录</li>
+</ul>
+<h5 id="0.4.6">0.4.6</h5><ul>
+<li>增加 Router 全局事件</li>
+<li>移除 ABS 机制</li>
+<li>优化 删除冗余代码</li>
+</ul>
+<h5 id="0.4.5">0.4.5</h5><ul>
+<li>优化 手势开关，彻底关闭手势（不监听）</li>
+<li>fixed QApp.util.removeEvent</li>
+</ul>
+<h5 id="0.4.4">0.4.4</h5><ul>
+<li>支持 手势开关配置</li>
+<li>优化 严格 show、actived、receiveData 事件的顺序</li>
+<li>优化 config type 默认为 touch，默认取消 手势右滑后退的方式，避免与浏览器行为冲突</li>
+<li>fixed CustomRoot 为 false 时的问题</li>
+<li>fixed 修复自定义事件没有绑定事件之前调用off报错的问题</li>
+</ul>
+<h5 id="0.4.3">0.4.3</h5><ul>
+<li>fixed 不开 Hash 时，路由回退的 Bug</li>
+<li>fixed 渲染 Widget 时，处理参数名的错误</li>
+</ul>
+<h5 id="0.4.2">0.4.2</h5><ul>
+<li>视图支持 this.showWidget 方法，Widget 会伴随 View 销毁</li>
+<li>支持 __ 开头的用于中间跳转的不进入历史的视图</li>
+<li>优化 工具库内部分方法</li>
+</ul>
+<h5 id="0.4.1">0.4.1</h5><ul>
+<li>增加文档！！！！！！！！！！！！！！！！！！！</li>
+<li>fixed global plugins 添加全局插件失败</li>
+<li>fixed router.goto 的逻辑问题</li>
+<li>fixed queryToJson decodeFormat 时将 undefined 转为 字符串的问题</li>
+<li>fixed 在pc上浏览时，click失效的问题</li>
+<li>fixed 在某些逻辑下 destroy 报错的问题</li>
+</ul>
+<h5 id="0.4.0 新的稳定版本">0.4.0 新的稳定版本</h5><ul>
+<li>路由 Router 优化</li>
+<li>视图 View 生命周期 优化</li>
+<li>修复一些底层代码的效率问题</li>
+</ul>
+
+        </article>
+    </div>
+    
+    
+</div>
+
+<!-- Footer
+================================================== -->
+<footer class="docs-footer" role="contentinfo">
+    <div class="container">
+        <p>Made By Qunar YMFE TEAM. © 2014 - 2016</p>
+    </div>
+</footer>
+
+<script src="source/jquery.min.js"></script>
+<script src="source/bootstrap.min.js"></script>
+<script src="source/docs.min.js"></script>
+<script src="source/highlight.min.js"></script>
+<script>
+    $(document).ready(function() {
+        $('code').each(function(i, block) {
+            if (block.innerHTML.indexOf('\n') != -1) {
+                var pn = block.parentNode;
+                if (pn.tagName.toUpperCase() == 'PRE') {
+                    try {
+                        hljs.highlightBlock(block);
+                    } catch(e) {}
+                } else {
+                    pn.innerHTML = '<pre><code>' + block.innerHTML + '</code></pre>';
+                    try {
+                        hljs.highlightBlock(pn.childNodes[0].childNodes[0]);
+                    } catch(e) {}
+                }
+            }
+        });
+
+        var winHeight = $(window).height() - 40;
+
+        $('.docs-sidebar').css('max-height', winHeight + 'px');
+
+        var activeMenu,
+            sidebar = $('.docs-sidebar'),
+            barScroll = false;
+
+        sidebar.on('mouseover', function() {
+            barScroll = true;
+        });
+
+        sidebar.on('mouseout', function() {
+            barScroll = false;
+        });
+
+        $(window).on('scroll', function(e) {
+            if (!barScroll) {
+                var activeItem = $('.docs-sidebar li.active a');
+                if (activeItem.length) {
+                    if (!activeMenu || (activeMenu.attr('href') != activeItem.attr('href'))) {
+                        activeMenu = activeItem;
+                        var top = activeMenu.offset().top - sidebar.offset().top;
+                        if (top < 0) {
+                            sidebar.scrollTop(sidebar.scrollTop() + top);
+                        } else if (top > winHeight - 30) {
+                            sidebar.scrollTop(sidebar.scrollTop() + top - winHeight + 30);
+                        }
+                    }
+                }
+            }
+        });
+    });
+</script>
+</body>
+</html>

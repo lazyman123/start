@@ -1,0 +1,24 @@
+<header class="yo-header">
+    <span class="regret" qapp-role="router" href="#!back">
+        <i class="yo-ico">&#xf07d;</i>
+    </span>
+    <h2 class="title">C</h2>
+</header>
+<div class="yo-list yo-list-group">
+    <h2 class="label">返回</h2>
+    <!-- 通过 href '!back' 实现返回前一个历史 -->
+    <div class="item item-active" href="#!back" qapp-role="router">
+        <span class="flex">back</span>
+        <i class="yo-ico"></i>
+    </div>
+    <!-- 通过 href '!viewName' 实现返回指定历史 -->
+    <div class="item item-active" href="#a" qapp-role="router">
+        <span class="flex">backTo A</span>
+        <i class="yo-ico"></i>
+    </div>
+    <!-- 通过 href '!viewName' 实现返回指定历史 -->
+    <div class="item item-active" href="#index" qapp-role="router">
+        <span class="flex">backTo index</span>
+        <i class="yo-ico"></i>
+    </div>
+</div>

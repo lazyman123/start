@@ -1,0 +1,42 @@
+<header class="yo-header">
+    <span class="regret" qapp-role="router" href="#!back">
+        <i class="yo-ico">&#xf07d;</i>
+    </span>
+    <h2 class="title">A</h2>
+</header>
+<div class="yo-list yo-list-group">
+    <h2 class="label">返回</h2>
+    <!-- 通过 href '#!back' 实现返回前一个历史 -->
+    <div class="item item-active" href="#!back" qapp-role="router" param="by=href">
+        <span class="flex">back</span>
+        <i class="yo-ico"></i>
+    </div>
+    <!-- 通过 href '#viewName'，有则返回，无则新开 -->
+    <div class="item item-active" href="#index" qapp-role="router">
+        <span class="flex">goto index</span>
+        <i class="yo-ico"></i>
+    </div>
+    <!-- 通过 js View.hide(data) 方法实现返回前一个历史，并传数据 -->
+    <div class="item item-active" id="hide">
+        <span class="flex">hide</span>
+        <i class="yo-ico"></i>
+    </div>
+
+    <h2 class="label">跳转（新的历史）</h2>
+    <!-- 通过 target="_blank" 创建新的历史（不会寻找已有历史） -->
+    <div class="item item-active" href="#index" qapp-role="router" target="_blank">
+        <span class="flex">goto index</span>
+        <i class="yo-ico"></i>
+    </div>
+    <div class="item item-active" href="#b" qapp-role="router" target="_blank">
+        <span class="flex">goto pageB</span>
+        <i class="yo-ico"></i>
+    </div>
+
+    <h2 class="label">跳转（无历史）</h2>
+    <!-- 通过配置黑名单实现不记录指定历史 -->
+    <div class="item item-active" href="#c" qapp-role="router">
+        <span class="flex">goto pageC</span>
+        <i class="yo-ico"></i>
+    </div>
+</div>

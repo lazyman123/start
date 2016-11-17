@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>QApp 构建</title>
+    <link rel="stylesheet" href="source/app.css"/>
+    <link rel="stylesheet" href="source/highlight.min.css">
+</head>
+<body>
+<a id="skippy" class="sr-only sr-only-focusable" href="#content"><div class="container"><span class="skiplink-text">Skip to main content</span></div></a>
+
+
+<!-- Docs master nav -->
+<header class="navbar navbar-static-top docs-nav" id="top" role="banner">
+    <div class="container">
+        <div class="navbar-header">
+            <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target="#bs-navbar" aria-controls="bs-navbar" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            
+            <a href="http://ued.qunar.com/mobile/" class="navbar-brand">HY</a>
+            
+        </div>
+        <nav id="bs-navbar" class="collapse navbar-collapse">
+            <ul class="nav navbar-nav navbar-right">
+                
+                
+                <li class="active">
+                    <a href="http://ued.qunar.com/mobile/qapp/doc/" target="">QApp</a>
+                </li>
+                
+                <li class="">
+                    <a href="http://ued.qunar.com/mobile/kami/doc/" target="">Kami</a>
+                </li>
+                
+                <li class="">
+                    <a href="http://ued.qunar.com/mobile/yo/doc/" target="">Yo</a>
+                </li>
+                
+                <li class="">
+                    <a href="http://hy.qunar.com/docs/qunarapi-api.html" target="">QunarAPI</a>
+                </li>
+                
+                <li class="">
+                    <a href="http://ued.qunar.com/mobile/qmb2/" target="">QMB2</a>
+                </li>
+                
+                <li class="">
+                    <a href="http://ued.qunar.com/mobile/statistics/" target="">Statistics</a>
+                </li>
+                
+                <li class="">
+                    <a href="http://ued.qunar.com/mobile/blog/" target="">Blog</a>
+                </li>
+                
+                <li class="">
+                    <a href="http://hy.qunar.com/docs/index.html" target="">Hytive</a>
+                </li>
+                
+                
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<!-- Docs page layout -->
+
+<div class="docs-header" id="content" style="margin-bottom:0">
+    <div class="container">
+        <h1>QApp Framework 构建</h1>
+        <p>打包和构建</p>
+    </div>
+</div>
+
+
+
+<header class="navbar navbar-static-top docs-second-nav">
+    <div class="container">
+        <nav>
+            <ul class="nav navbar-nav">
+                
+                <li class="">
+                    
+                    <a href="index.html">简介</a>
+                    
+                </li>
+                
+                <li class="">
+                    
+                    <a href="api.html">API</a>
+                    
+                </li>
+                
+                <li class="">
+                    
+                    <a href="hybird.html">混合开发</a>
+                    
+                </li>
+                
+                <li class="">
+                    
+                    <a href="plugins.html">插件</a>
+                    
+                </li>
+                
+                <li class="active">
+                    
+                    <a href="build.html">构建</a>
+                    
+                </li>
+                
+                <li class="">
+                    
+                    <a href="changelog.html">版本</a>
+                    
+                </li>
+                
+            </ul>
+        </nav>
+    </div>
+</header>
+
+
+<div class="container docs-container">
+    
+    
+    <div id="readme">
+        <article class="markdown-body">
+            
+            <h4 id="默认构建">默认构建</h4><p>在项目 <code>build/版本</code> 目录下已经给出代码和已经构建完成的并适配一些环境的代码包。</p>
+<pre><code>.
+├── hybrid
+│   ├── hy.js
+│   └── wx.js
+├── plugins
+│   ├── ajax.js
+│   ├── artTemplate.js
+│   ├── avalon.js
+│   ├── basic.js
+│   ├── delegated.js
+│   ├── doms.js
+│   ├── fastclick.js
+│   ├── gesture.js
+│   ├── globalContext.js
+│   ├── hogan.js
+│   ├── scroll.js
+│   └── zepto.js
+├── qapp-base.dev.js
+├── qapp-base.js
+├── qapp-base.min.js
+├── qapp-hy-zepto.dev.js
+├── qapp-hy-zepto.js
+├── qapp-hy-zepto.min.js
+├── qapp-hy.dev.js
+├── qapp-hy.js
+├── qapp-hy.min.js
+├── qapp-touch-zepto.dev.js
+├── qapp-touch-zepto.js
+├── qapp-touch-zepto.min.js
+├── qapp-touch.dev.js
+├── qapp-touch.js
+├── qapp-touch.min.js
+├── qapp-wechat-zepto.dev.js
+├── qapp-wechat-zepto.js
+├── qapp-wechat-zepto.min.js
+├── qapp-wechat.dev.js
+├── qapp-wechat.js
+├── qapp-wechat.min.js
+├── qapp.dev.js
+├── qapp.js
+└── qapp.min.js
+</code></pre><h4 id="自定义构建">自定义构建</h4><p>当然，你可以使用 <code>gulp custom -n 名称</code> 命令来构建你的自定义代码包。形式如下：</p>
+<p><img src="http://ww1.sinaimg.cn/large/71c50075gw1f5hwrdwfohj20j60aemzw.jpg" alt=""></p>
+
+        </article>
+    </div>
+    
+    
+</div>
+
+<!-- Footer
+================================================== -->
+<footer class="docs-footer" role="contentinfo">
+    <div class="container">
+        <p>Made By Qunar YMFE TEAM. © 2014 - 2016</p>
+    </div>
+</footer>
+
+<script src="source/jquery.min.js"></script>
+<script src="source/bootstrap.min.js"></script>
+<script src="source/docs.min.js"></script>
+<script src="source/highlight.min.js"></script>
+<script>
+    $(document).ready(function() {
+        $('code').each(function(i, block) {
+            if (block.innerHTML.indexOf('\n') != -1) {
+                var pn = block.parentNode;
+                if (pn.tagName.toUpperCase() == 'PRE') {
+                    try {
+                        hljs.highlightBlock(block);
+                    } catch(e) {}
+                } else {
+                    pn.innerHTML = '<pre><code>' + block.innerHTML + '</code></pre>';
+                    try {
+                        hljs.highlightBlock(pn.childNodes[0].childNodes[0]);
+                    } catch(e) {}
+                }
+            }
+        });
+
+        var winHeight = $(window).height() - 40;
+
+        $('.docs-sidebar').css('max-height', winHeight + 'px');
+
+        var activeMenu,
+            sidebar = $('.docs-sidebar'),
+            barScroll = false;
+
+        sidebar.on('mouseover', function() {
+            barScroll = true;
+        });
+
+        sidebar.on('mouseout', function() {
+            barScroll = false;
+        });
+
+        $(window).on('scroll', function(e) {
+            if (!barScroll) {
+                var activeItem = $('.docs-sidebar li.active a');
+                if (activeItem.length) {
+                    if (!activeMenu || (activeMenu.attr('href') != activeItem.attr('href'))) {
+                        activeMenu = activeItem;
+                        var top = activeMenu.offset().top - sidebar.offset().top;
+                        if (top < 0) {
+                            sidebar.scrollTop(sidebar.scrollTop() + top);
+                        } else if (top > winHeight - 30) {
+                            sidebar.scrollTop(sidebar.scrollTop() + top - winHeight + 30);
+                        }
+                    }
+                }
+            }
+        });
+    });
+</script>
+</body>
+</html>

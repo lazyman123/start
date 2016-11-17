@@ -1,0 +1,76 @@
+<div class="m-view">
+    <header class="yo-header m-pageD-hd">
+        <span class="regret" qapp-role="router" href="#!back">
+            <i class="yo-ico">&#xf07d;</i>
+        </span>
+        <h2 class="title">scroll</h2>
+    </header>
+    <h2 class="label">横向滚动</h2>
+    <div class="raw-scroll" qapp-widget="scroll" data-scroll-scroll-x="true">
+        <ul>
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+            <li>4</li>
+            <li>5</li>
+            <li>6</li>
+            <li>7</li>
+            <li>8</li>
+            <li>9</li>
+            <li>10</li>
+        </ul>
+    </div>
+    <h2 class="label">纵向滚动</h2>
+    <div class="flex" qapp-widget="scroll">
+        <div class="yo-list yo-list-group">
+            <div id="gesture" class="item item-active" action-type="xxx">
+                <span class="flex">xxx</span>
+            </div>
+            <div class="item item-active" action-type="yyy">
+                <span class="flex">yyy</span>
+            </div>
+            <div id="gesture" class="item item-active" action-type="xxx">
+                <span class="flex">xxx</span>
+            </div>
+            <div class="item item-active" action-type="yyy">
+                <span class="flex">yyy</span>
+            </div>
+            <div id="gesture" class="item item-active" action-type="xxx">
+                <span class="flex">xxx</span>
+            </div>
+            <div class="item item-active" action-type="yyy">
+                <span class="flex">yyy</span>
+            </div>
+            <div id="gesture" class="item item-active" action-type="xxx">
+                <span class="flex">xxx</span>
+            </div>
+            <div class="item item-active" action-type="yyy">
+                <span class="flex">yyy</span>
+            </div>
+            <div id="gesture" class="item item-active" action-type="xxx">
+                <span class="flex">xxx</span>
+            </div>
+            <div class="item item-active" action-type="yyy">
+                <span class="flex">yyy</span>
+            </div>
+            <div id="gesture" class="item item-active" action-type="xxx">
+                <span class="flex">xxx</span>
+            </div>
+            <div class="item item-active" action-type="yyy">
+                <span class="flex">yyy</span>
+            </div>
+            <div id="gesture" class="item item-active" action-type="xxx">
+                <span class="flex">xxx</span>
+            </div>
+            <div class="item item-active" action-type="yyy">
+                <span class="flex">yyy</span>
+            </div>
+            <div id="gesture" class="item item-active" action-type="xxx">
+                <span class="flex">xxx</span>
+            </div>
+            <div class="item item-active" action-type="yyy">
+                <span class="flex">yyy</span>
+            </div>
+        </div>
+    </div>
+</div>

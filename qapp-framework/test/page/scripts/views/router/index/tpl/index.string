@@ -1,0 +1,42 @@
+<header class="yo-header m-pageD-hd">
+    <span class="regret" qapp-role="router" href="#!back">
+        <i class="yo-ico">&#xf07d;</i>
+    </span>
+    <h2 class="title">router</h2>
+</header>
+<div class="yo-list yo-list-group">
+
+    <h2 class="label">跳转</h2>
+    <!-- 通过对标签添加 href 和 qapp-role 属性实现跳转 -->
+    <div class="item item-active" href="#a" qapp-role="router">
+        <span class="flex">goto pageA</span>
+        <i class="yo-ico"></i>
+    </div>
+    <div class="item item-active" href="#a?from=base&to=a" qapp-role="router" param="from=index&by=href">
+        <span class="flex">goto pageA（携带参数）</span>
+        <i class="yo-ico"></i>
+    </div>
+    
+    <h2 class="label">跳转（QApp.router.goto）</h2>
+    <!-- 通过 js QApp.router.goto(viewName) 方法 实现跳转 -->
+    <div class="item item-active" id="goto1">
+        <span class="flex">goto pageA</span>
+        <i class="yo-ico"></i>
+    </div>
+    <div class="item item-active" id="goto2">
+        <span class="flex">goto pageA（携带参数）</span>
+        <i class="yo-ico"></i>
+    </div>
+
+    <h2 class="label">跳转（QApp.open）</h2>
+    <!-- 通过 js QApp.open(viewName) 方法 实现跳转 -->
+    <div class="item item-active" id="open1">
+        <span class="flex">goto pageA</span>
+        <i class="yo-ico"></i>
+    </div>
+    <div class="item item-active" id="open2">
+        <span class="flex">goto pageA（携带参数）</span>
+        <i class="yo-ico"></i>
+    </div>
+
+</div>
